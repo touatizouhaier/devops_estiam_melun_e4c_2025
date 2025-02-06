@@ -28,6 +28,7 @@ pipeline {
     stage('BUILD') {
             steps {
                 echo 'Developpement'
+                echo 'Vérification'
             }
         }
     stage('Test') {
