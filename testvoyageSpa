@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/touatizouhaier/devops_estiam_melun_e4c_2025/'  // Remplacez par votre repo
-            }
-        }
-
+        
         stage('Build') {
             parallel {
                 stage('Check de la coque') {
