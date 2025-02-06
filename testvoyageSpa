@@ -9,15 +9,15 @@ pipeline {
                     steps {
                         echo "Checking de la coque"
                         sleep 10
-                        echo "Intégrité de la coque à 100%"
+                        echo "Integrite de la coque a 100%"
                     }
                 }
 
-                stage('Vérification du niveau de carburant') {
+                stage('Verification du niveau de carburant') {
                     steps {
-                        echo "Vérification du niveau de carburant"
+                        echo "Verification du niveau de carburant"
                         sleep 10
-                        echo "Réservoir rempli à 74%"
+                        echo "Reservoir rempli a 74%"
                     }
                 }
             }
@@ -25,41 +25,41 @@ pipeline {
 
         stage('Test') {
             parallel {
-                stage('Vérification électronique') {
+                stage('Verification electronique') {
                     steps {
-                        echo "Vérification des systèmes électroniques"
+                        echo "Verification des systemes electroniques"
                         sleep 10
-                        echo "Intégrité du système électronique à 100%"
+                        echo "Integrite du systeme electronique a 100%"
                     }
                 }
 
-                stage('Vérification des équipements de navigation') {
+                stage('Verification des equipements de navigation') {
                     steps {
-                        echo "Vérification des équipements de navigation"
+                        echo "Verification des equipements de navigation"
                         sleep 10
-                        echo "Léger dysfonctionnement de la carte numérique"
+                        echo "Leger dysfonctionnement de la carte numerique"
                     }
                 }
 
-                stage('Vérification de la vitesse') {
+                stage('Verification de la vitesse') {
                     steps {
-                        echo "Vérification de la vitesse"
+                        echo "Verification de la vitesse"
                         sleep 15
                         echo "Test de vitesse ok."
                     }
                 }
 
-                stage('Vérification de la trajectoire') {
+                stage('Verification de la trajectoire') {
                     steps {
-                        echo "Vérification de la trajectoire"
+                        echo "Verification de la trajectoire"
                         sleep 10
                         echo "Trajectoire ok."
                     }
                 }
 
-                stage('Vérification de l'altitude') {
+                stage('Verification de l altitude') {
                     steps {
-                        echo "Vérification de l'altitude"
+                        echo "Verification de l altitude"
                         sleep 10
                         echo "Test altitude ok."
                     }
@@ -69,33 +69,33 @@ pipeline {
 
         stage('Deploy') {
             parallel {
-                stage('Vérification des propulseurs') {
+                stage('Verification des propulseurs') {
                     steps {
-                        echo "Vérification de l'intégrité des propulseurs"
+                        echo "Verification de l integrite des propulseurs"
                         sleep 10
                         echo "Propulseurs intacts"
                     }
                 }
 
-                stage('Vérification des équipements de secours') {
+                stage('Verification des equipements de secours') {
                     steps {
-                        echo "Vérification de l'intégrité des équipements de secours"
+                        echo "Verification de l integrite des equipements de secours"
                         sleep 10
-                        echo "Équipements de secours ok"
+                        echo "Equipements de secours ok"
                     }
                 }
 
-                stage('Vérification des communications') {
+                stage('Verification des communications') {
                     steps {
-                        echo "Vérification des équipements de communication"
+                        echo "Verification des equipements de communication"
                         sleep 10
                         echo "Test radio ok."
                     }
                 }
 
-                stage('Vérification du train d'atterrissage') {
+                stage('Verification du train d atterrissage') {
                     steps {
-                        echo "Vérification du déploiement du train d'atterrissage"
+                        echo "Verification du deploiement du train d atterrissage"
                         sleep 10
                         echo "Train sorti."
                     }
