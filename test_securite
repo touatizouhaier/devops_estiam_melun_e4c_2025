@@ -1,0 +1,28 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Étapes existantes...
+
+  zap-scan:
+    name: OWASP ZAP Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start OWASP ZAP
+        uses: zaproxy/action-full-scan@v0.8.0
+        with:
+          target: 'http://localhost:5000'
+          cmd_options: '-t 60 -r zap_report.html'
+
+  sonarcloud-analysis:
+    name: SonarCloud Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v1.8
+        with:
+          projectBaseDir: './'
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
